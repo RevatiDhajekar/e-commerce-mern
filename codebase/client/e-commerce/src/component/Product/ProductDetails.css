@@ -1,0 +1,8 @@
+.ProductDetails{
+    width:100vw;
+    max-width:100%;
+    display:flex;
+    padding:6vmax;
+    box-sizing:border-box;
+    background-color:rgb(214,214,214);
+}

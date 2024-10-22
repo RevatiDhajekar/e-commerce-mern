@@ -18,7 +18,7 @@ router
 
 router
   .route("/products")
-  .get(isAuthenticatedUser, authorizeRoles("admin"), getAllProducts);
+  .get( getAllProducts);
 
 router
   .route("/admin/product/:id")

@@ -13,7 +13,7 @@ const Footer = () => {
             <img src={appStore} alt="appstore" />
         </div>
 
-        <div class="midfooter">
+        <div className="midfooter">
         <h1>ECOMMERCE.</h1>
         <p>Hign Quality is our first priority</p>
         <p>Copyrights 2024 &copy; RevatiD</p>

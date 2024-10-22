@@ -4,7 +4,7 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ApiFeatures = require("../utils/apiFeatures");
 
 //createProduct --Admin
-exports.createProduct = catchAsyncErrors(async (req, res) => {
+exports.createProduct = catchAsyncErrors(async (req, res,next) => {
   req.body.user = req.user.id; //set in jwt token
   // Create the product using req.body directly (not as a function)
   const product = await Product.create(req.body);
@@ -17,7 +17,7 @@ exports.createProduct = catchAsyncErrors(async (req, res) => {
 
 // Get all Products -> admin
 exports.getAllProducts = catchAsyncErrors(async (req, res) => {
-  const resultsPerPage = 2;
+  const resultsPerPage = 8;
   const productCount = await Product.countDocuments();
   console.log("req.query=> ", req.query);
 

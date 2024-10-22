@@ -1,8 +1,14 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const cors = require('cors');
+const errorMiddleware = require("./middleware/error");
+
 
 const app = express();
-const errorMiddleware = require("./middleware/error");
+app.use(cors({
+    origin: 'http://localhost:3001'
+  })); // Allow all origins by default
+
 
 //middleware to parse json
 app.use(express.json());
